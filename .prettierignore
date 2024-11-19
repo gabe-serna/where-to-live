@@ -1,12 +1,32 @@
-cache
-.cache
-package.json
-package-lock.json
-public
-CHANGELOG.md
-.yarn
-dist
-node_modules
-.next
-build
-.contentlayer
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+/dist
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
