@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { Metadata } from "next";
 
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/lib/fonts";
+import { fontBody, fontHeading } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { SiteHeader } from "@/components/site-header";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
@@ -31,8 +31,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="en" suppressHydrationWarning>
         <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable,
+            "bg-background min-h-screen font-body antialiased",
+            fontBody.variable,
+            fontHeading.variable
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>

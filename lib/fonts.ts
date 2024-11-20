@@ -1,14 +1,12 @@
-import {
-  JetBrains_Mono as FontMono,
-  Inter as FontSans,
-} from "next/font/google";
+import { Bitter, Cormorant_Infant } from "next/font/google";
 
-export const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
+export const fontBody = Bitter({ 
+  subsets: ['latin'],
+  variable: '--font-body',
 });
 
-export const fontMono = FontMono({
-  subsets: ["latin"],
-  variable: "--font-mono",
+export const fontHeading = Cormorant_Infant({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-heading',
 });
