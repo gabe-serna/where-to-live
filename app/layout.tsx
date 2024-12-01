@@ -4,18 +4,23 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Where to Live",
-  description: "Find the perfect place in world to live based on your preferences."
+  description:
+    "Find the perfect place in world to live based on your preferences.",
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontHeading.variable} ${fontBody.variable} antialiased`}>
-        {children}
+      <body
+        className={`${fontHeading.variable} ${fontBody.variable} antialiased`}
+      >
+        <header></header>
+        <main>{children}</main>
+        <footer></footer>
       </body>
     </html>
   );

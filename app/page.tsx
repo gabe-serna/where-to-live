@@ -1,19 +1,10 @@
-"use client";
-
-import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-
 export default function Home() {
   return (
-    <>
-      <Canvas>
-        <OrbitControls />
-
-        <mesh>
-          <boxGeometry />
-          <meshNormalMaterial />
-        </mesh>
-      </Canvas>
-    </>
+    <div className="flex h-screen flex-col items-center justify-center gap-2">
+      <h1 className="text-5xl text-zinc-50">Where to Live</h1>
+      <p className="text-zinc-400">
+        Find the perfect place in world to live based on your preferences.
+      </p>
+    </div>
   );
 }
