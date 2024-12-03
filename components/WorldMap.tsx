@@ -246,7 +246,13 @@ function bendGroupGeometry(
     }
   });
 }
-export function WorldMap(props: JSX.IntrinsicElements["group"]) {
+export function WorldMap(
+  props: JSX.IntrinsicElements["group"] & {
+    material: THREE.MeshStandardMaterial;
+  },
+) {
+  console.log(props.material.emissive);
+
   const { nodes } = useGLTF("/models/worldmap.glb") as GLTFResult;
   const group = useRef<THREE.Group>(null!);
 
@@ -256,18 +262,23 @@ export function WorldMap(props: JSX.IntrinsicElements["group"]) {
     toneMapped: false,
   });
   const high = new THREE.MeshStandardMaterial({
-    emissive: new THREE.Color(1.75, 0.75, 0.5),
-    emissiveIntensity: 1,
+    emissive: new THREE.Color(2, 0.5, 0.5),
+    emissiveIntensity: 1.75,
     toneMapped: false,
   });
   const medium = new THREE.MeshStandardMaterial({
-    emissive: new THREE.Color(0.75, 0.25, 0.25),
+    emissive: new THREE.Color(1.25, 0.4, 0.4),
+    emissiveIntensity: 0.9,
+    toneMapped: false,
+  });
+  const moderate = new THREE.MeshStandardMaterial({
+    emissive: new THREE.Color(0.85, 0.4, 0.4),
     emissiveIntensity: 0.2,
     toneMapped: false,
   });
   const low = new THREE.MeshStandardMaterial({
-    emissive: new THREE.Color(0.03, 0.03, 0.03),
-    emissiveIntensity: 2,
+    emissive: new THREE.Color(0.3, 0.25, 0.25),
+    emissiveIntensity: 0.1,
     toneMapped: false,
   });
 
@@ -1101,7 +1112,7 @@ export function WorldMap(props: JSX.IntrinsicElements["group"]) {
       />
       <mesh
         geometry={nodes.Pakistan.geometry}
-        material={low.clone()}
+        material={props.material}
         position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
@@ -1438,7 +1449,7 @@ export function WorldMap(props: JSX.IntrinsicElements["group"]) {
       />
       <mesh
         geometry={nodes.Turkmenistan.geometry}
-        material={low.clone()}
+        material={moderate.clone()}
         position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}

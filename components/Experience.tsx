@@ -1,7 +1,6 @@
 "use client";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
 import { WorldMap } from "./WorldMap";
-import { Perf } from "r3f-perf";
 import {
   Bloom,
   EffectComposer,
@@ -9,10 +8,21 @@ import {
 } from "@react-three/postprocessing";
 import { invalidate, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-import { PerspectiveCamera as Camera, MathUtils } from "three";
+import {
+  PerspectiveCamera as Camera,
+  Color,
+  MathUtils,
+  MeshStandardMaterial,
+} from "three";
+import { useControls } from "leva";
 
 export default function Experience() {
   const camera = useRef<Camera>(null!);
+  const material = new MeshStandardMaterial({
+    emissive: new Color(0.3, 0.25, 0.25),
+    emissiveIntensity: 0.1,
+    toneMapped: false,
+  });
 
   window.addEventListener("mousemove", (e) => {
     if (!e.shiftKey) return;
@@ -45,26 +55,62 @@ export default function Experience() {
     invalidate();
   });
 
-  useFrame(({ clock }) => {
-    // camera.current.lookAt(0, clock.getElapsedTime() / 2, 0);
+  useControls("Material", {
+    r: {
+      value: 0.3,
+      step: 0.05,
+      min: 0,
+      max: 2,
+      onChange: (value) => {
+        material.emissive.r = value;
+      },
+    },
+    g: {
+      value: 0.25,
+      step: 0.05,
+      min: 0,
+      max: 2,
+      onChange: (value) => {
+        material.emissive.g = value;
+      },
+    },
+    b: {
+      value: 0.25,
+      step: 0.05,
+      min: 0,
+      max: 2,
+      onChange: (value) => {
+        material.emissive.b = value;
+      },
+    },
+    intensity: {
+      value: 0.1,
+      min: 0,
+      max: 3,
+      onChange: (value) => {
+        material.emissiveIntensity = value;
+      },
+    },
   });
+  // useFrame(()=> {
+
+  // })
 
   return (
     <>
-      <Perf />
-      {/* <OrbitControls /> */}
-
       <PerspectiveCamera ref={camera} position={[0, 0, 5]} makeDefault />
-
       <EffectComposer>
         <HueSaturation hue={120} />
         <Bloom
-          intensity={0.25}
-          luminanceThreshold={0.9}
+          intensity={0.5}
+          luminanceThreshold={0.5}
           luminanceSmoothing={0.025}
         />
       </EffectComposer>
-      <WorldMap />
+      {/* <mesh material={material}>
+        <boxGeometry />
+      </mesh> */}
+      <WorldMap material={material} />
     </>
   );
 }

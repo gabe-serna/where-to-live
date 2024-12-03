@@ -2,9 +2,5 @@
 import { Canvas } from "@react-three/fiber";
 
 export default function R3FCanvas({ children }: { children: React.ReactNode }) {
-  return (
-    <Canvas style={{ height: "100vh" }} frameloop="demand">
-      {children}
-    </Canvas>
-  );
+  return <Canvas style={{ height: "100vh" }}>{children}</Canvas>;
 }
