@@ -15,6 +15,7 @@ import {
   MeshStandardMaterial,
 } from "three";
 import { useControls } from "leva";
+import HeatmapScaling from "@/lib/heatmapScaling";
 
 export default function Experience() {
   const camera = useRef<Camera>(null!);
@@ -55,46 +56,20 @@ export default function Experience() {
     invalidate();
   });
 
-  useControls("Material", {
-    r: {
-      value: 0.3,
-      step: 0.05,
+  useControls({
+    score: {
+      value: 0,
       min: 0,
-      max: 2,
+      max: 1,
+      step: 0.01,
       onChange: (value) => {
-        material.emissive.r = value;
-      },
-    },
-    g: {
-      value: 0.25,
-      step: 0.05,
-      min: 0,
-      max: 2,
-      onChange: (value) => {
-        material.emissive.g = value;
-      },
-    },
-    b: {
-      value: 0.25,
-      step: 0.05,
-      min: 0,
-      max: 2,
-      onChange: (value) => {
-        material.emissive.b = value;
-      },
-    },
-    intensity: {
-      value: 0.1,
-      min: 0,
-      max: 3,
-      onChange: (value) => {
-        material.emissiveIntensity = value;
+        const { red, green, blue, intensity } = HeatmapScaling(value);
+        material.emissive.setRGB(red, green, blue);
+        material.emissiveIntensity = intensity;
+        invalidate();
       },
     },
   });
-  // useFrame(()=> {
-
-  // })
 
   return (
     <>
