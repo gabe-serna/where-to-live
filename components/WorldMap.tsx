@@ -7,7 +7,7 @@ Title: 2D World Map With Countries
 */
 
 import * as THREE from "three";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useGLTF, useMatcapTexture, useTexture } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 
@@ -209,8 +209,46 @@ type GLTFResult = GLTF & {
   };
 };
 
+function bendGroupGeometry(
+  groupRef: React.RefObject<THREE.Group>,
+  strength: number,
+) {
+  const group = groupRef.current;
+  if (!group) return;
+
+  const center = new THREE.Vector3();
+  group.updateWorldMatrix(true, true);
+  group.getWorldPosition(center);
+
+  group.traverse((child) => {
+    if (child instanceof THREE.Mesh) {
+      const geometry = child.geometry;
+      const clonedGeometry = geometry.clone();
+      const positionAttribute = clonedGeometry.getAttribute("position");
+
+      if (!positionAttribute) return;
+
+      const vertices = positionAttribute.array;
+
+      for (let i = 0; i < vertices.length; i += 3) {
+        const x = vertices[i];
+        const y = vertices[i + 1];
+        const z = vertices[i + 2];
+
+        const distanceFromCenter = Math.sqrt(
+          Math.pow(x - center.x, 2) + Math.pow(z - center.z, 2),
+        );
+        const curvedY = y - Math.pow(distanceFromCenter, 2) * strength;
+        vertices[i + 1] = curvedY;
+      }
+      positionAttribute.needsUpdate = true;
+      child.geometry = clonedGeometry;
+    }
+  });
+}
 export function WorldMap(props: JSX.IntrinsicElements["group"]) {
   const { nodes, materials } = useGLTF("/models/worldmap.glb") as GLTFResult;
+  const group = useRef<THREE.Group>(null!);
   // const [matcap] = useMatcapTexture("2D2D2A_74716E_8F8C8C_92958E", 256);
 
   // const basicMaterial = new THREE.MeshMatcapMaterial({ matcap });
@@ -224,8 +262,12 @@ export function WorldMap(props: JSX.IntrinsicElements["group"]) {
     toneMapped: false,
   });
 
+  useEffect(() => {
+    bendGroupGeometry(group, 0.001);
+  }, []);
+
   return (
-    <group {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null}>
       <mesh
         geometry={nodes.Afghanistan.geometry}
         material={basicMaterial.clone()}
