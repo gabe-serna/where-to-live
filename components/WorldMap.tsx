@@ -271,54 +271,54 @@ export function WorldMap(props: JSX.IntrinsicElements["group"]) {
       <mesh
         geometry={nodes.Afghanistan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Albenia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Algeria.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Angola.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       {/* <mesh
         geometry={nodes.Antarctica.geometry}
         material={materials.Antartika}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       /> */}
       <mesh
         geometry={nodes.Argentina.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Armenia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <group
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       >
@@ -334,292 +334,292 @@ export function WorldMap(props: JSX.IntrinsicElements["group"]) {
       <mesh
         geometry={nodes.Austria.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Azerbaijan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Bangladesh.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Belarus.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Belgium.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Belize.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Benin.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Bhutan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Bolivia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Bosnia_and_Herzegovina.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Botswana.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Brazil.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Brunei.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Bulgaria.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Burkina_Faso.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Burundi.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Cabinda.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Cameroon.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Canada.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Central_African_Republic.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Chad.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Chile.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.China.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Colombia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Cambodia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Republic_of_the_Congo.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Ivory_Coast.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Cuba.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Czechia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.DR_Congo.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Denmark.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Djibouti.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Dominican_Republic.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes["Timor-Leste"].geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Ecuador.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Egypt.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.El_Salvador.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Equatorial_Guinea.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Eritrea.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Estonia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Ethiopia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <group
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       >
@@ -635,460 +635,460 @@ export function WorldMap(props: JSX.IntrinsicElements["group"]) {
       <mesh
         geometry={nodes.Fiji.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Finland.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.France.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.French_Guiana.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Gabon.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Georgia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Germany.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Ghana.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Greece.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Greenland.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Guatemala.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Guinea.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes["Guinea-Bissau"].geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Guyana.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Haiti.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Hawaii.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Honduras.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Hungary.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Iceland.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.India.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Indonesia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Iraq.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Ireland.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Israel.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Italy.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Jamaica.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Japan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Jordan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Kazakhstan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Kenya.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Kyrgyzstan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Kosovo.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Kuwait.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Laos.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Latvia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Lebanon.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Lesotho.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0.001]}
+        position={[0.673, 1, 0.001]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Liberia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Libya.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Liechtenstein.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Lithuania.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Macedonia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Madagascar.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Malawi.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Malaysia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Mali.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Mauritania.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Mauritius.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Mexico.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Moldova.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Mongolia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Montenegro.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Morocco.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Mozambique.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Myanmar.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Namibia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Nepal.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Netherlands.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.New_Caledonia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.New_Zealand.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Nicaragua.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Niger.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Nigeria.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Northern_Cyprus.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.North_Korea.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <group
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       >
@@ -1104,103 +1104,103 @@ export function WorldMap(props: JSX.IntrinsicElements["group"]) {
       <mesh
         geometry={nodes.Oman.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Pakistan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Palestine.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Panama.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Papua_New_Guinea.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Paraguay.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Peru.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Philippines.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Poland.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Puerto_Rico.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Portugal.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Qatar.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Reunion.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Romania.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <group
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       >
@@ -1216,320 +1216,320 @@ export function WorldMap(props: JSX.IntrinsicElements["group"]) {
       <mesh
         geometry={nodes.Rwanda.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Costa_Rica.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Saudi_Arabia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Senegal.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Serbia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Sierra_Leone.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Singapore.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Slovakia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Slovenia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Solomon_Islands.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Somalia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.South_Africa.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Cyprus.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.South_Korea.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.South_Korea001.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Spain.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Sri_Lanka.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Sudan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Suriname.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Swaziland.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Switzerland.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Sweden.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Croatia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Syria.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Tajikistan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Taiwan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Tanzania.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Thailand.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Bahamas.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Gambia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Togo.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Trinidad_and_Tobago.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Tunisia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Turkey.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Turkmenistan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Uganda.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Ukraine.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.United_Arab_Emirates.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.United_States.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Uruguay.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Uzbekistan.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Vanuatu.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Venezuela.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Vietnam.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Western_Saharah.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <group
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       >
@@ -1545,21 +1545,21 @@ export function WorldMap(props: JSX.IntrinsicElements["group"]) {
       <mesh
         geometry={nodes.Zambia.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Zimbabwe.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
       <mesh
         geometry={nodes.Iran.geometry}
         material={basicMaterial.clone()}
-        position={[0.673, 1.332, 0]}
+        position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
