@@ -7,11 +7,12 @@ Title: 2D World Map With Countries
 */
 
 import * as THREE from "three";
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 import HeatmapScaling from "@/lib/heatmapScaling";
 import { invalidate } from "@react-three/fiber";
+import { ScoreContext } from "@/app/ScoreProvider";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -214,6 +215,7 @@ type GLTFResult = GLTF & {
 export function WorldMap(
   props: JSX.IntrinsicElements["group"] & { material: THREE.Material },
 ) {
+  const { score } = useContext(ScoreContext);
   const { nodes, materials } = useGLTF("/models/worldmap.glb") as GLTFResult;
   const group = useRef<THREE.Group>(null!);
 
@@ -226,29 +228,29 @@ export function WorldMap(
     /**
      * Example of Scores Data
      */
-    // const scores = new Map<string, number>();
-    // scores.set("Japan", Math.random());
-    // scores.set("Australia", Math.random());
-    // scores.forEach((value, key) => {
-    //   group.current.traverse((child) => {
-    //     if (child instanceof THREE.Mesh && child.name === key) {
-    //       const { red, green, blue, intensity } = HeatmapScaling(value);
-    //       child.material.emissive.setRGB(red, green, blue);
-    //       child.material.emissiveIntensity = intensity;
-    //       invalidate();
-    //     } else if (child instanceof THREE.Group && child.name === key) {
-    //       child.traverse((child) => {
-    //         if (child instanceof THREE.Mesh) {
-    //           const { red, green, blue, intensity } = HeatmapScaling(value);
-    //           child.material.emissive.setRGB(red, green, blue);
-    //           child.material.emissiveIntensity = intensity;
-    //           invalidate();
-    //         }
-    //       });
-    //     }
-    //   });
-    // });
-  }, []);
+    const scores = new Map<string, number>();
+    scores.set(score.country, score.score);
+
+    scores.forEach((value, key) => {
+      group.current.traverse((child) => {
+        if (child instanceof THREE.Mesh && child.name === key) {
+          const { red, green, blue, intensity } = HeatmapScaling(value);
+          child.material.emissive.setRGB(red, green, blue);
+          child.material.emissiveIntensity = intensity;
+          invalidate();
+        } else if (child instanceof THREE.Group && child.name === key) {
+          child.traverse((child) => {
+            if (child instanceof THREE.Mesh) {
+              const { red, green, blue, intensity } = HeatmapScaling(value);
+              child.material.emissive.setRGB(red, green, blue);
+              child.material.emissiveIntensity = intensity;
+              invalidate();
+            }
+          });
+        }
+      });
+    });
+  }, [score]);
 
   return (
     <group ref={group} {...props} dispose={null}>
