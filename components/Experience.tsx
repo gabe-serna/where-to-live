@@ -7,25 +7,42 @@ import {
   EffectComposer,
   HueSaturation,
 } from "@react-three/postprocessing";
-import { useFrame } from "@react-three/fiber";
+import { invalidate, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-import { PerspectiveCamera as Camera } from "three";
+import { PerspectiveCamera as Camera, MathUtils } from "three";
 
 export default function Experience() {
   const camera = useRef<Camera>(null!);
 
   window.addEventListener("mousemove", (e) => {
-    if (!camera) return;
+    if (!e.shiftKey) return;
+    if (!camera.current) return;
     if (!e) return;
     const width = window.document.body.clientWidth;
     const height = window.document.body.clientHeight;
     const x = e.clientX / width - 0.5;
     const y = e.clientY / height - 0.5;
 
-    camera.current.position.x = Math.sin(x) * 12 - 1;
-    camera.current.position.z = Math.cos(x) * 2 + 2;
-    camera.current.position.y = -Math.sin(y) * 3;
-    camera.current.lookAt(x * 5, y * -1.5, 0);
+    // camera.current.position.x = Math.sin(x) * 12 - 1;
+    // camera.current.position.z = Math.cos(x) * 2 + 2;
+    // camera.current.position.y = -Math.sin(y) * 3;
+    camera.current.position.x = MathUtils.lerp(
+      camera.current.position.x,
+      Math.sin(x) * 12 - 1,
+      1,
+    );
+    camera.current.position.z = MathUtils.lerp(
+      camera.current.position.z,
+      Math.cos(x) * 2 + 2,
+      1,
+    );
+    camera.current.position.y = MathUtils.lerp(
+      camera.current.position.y,
+      -Math.sin(y) * 3,
+      1,
+    );
+    camera.current.lookAt(x * 8, y * -1.5, 0);
+    invalidate();
   });
 
   useFrame(({ clock }) => {
