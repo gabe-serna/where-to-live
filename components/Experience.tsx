@@ -82,9 +82,6 @@ export default function Experience() {
           luminanceSmoothing={0.025}
         />
       </EffectComposer>
-      {/* <mesh material={material}>
-        <boxGeometry />
-      </mesh> */}
       <WorldMap material={material} />
     </>
   );

@@ -251,11 +251,10 @@ export function WorldMap(
     material: THREE.MeshStandardMaterial;
   },
 ) {
-  console.log(props.material.emissive);
-
-  const { nodes } = useGLTF("/models/worldmap.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/models/worldmap.glb") as GLTFResult;
   const group = useRef<THREE.Group>(null!);
 
+  console.log(nodes.Sweden.geometry);
   const max = new THREE.MeshStandardMaterial({
     emissive: new THREE.Color(2, 0.75, 0.5),
     emissiveIntensity: 3,
@@ -276,15 +275,15 @@ export function WorldMap(
     emissiveIntensity: 0.2,
     toneMapped: false,
   });
-  const low = new THREE.MeshStandardMaterial({
-    emissive: new THREE.Color(0.3, 0.25, 0.25),
-    emissiveIntensity: 0.1,
-    toneMapped: false,
-  });
 
-  useEffect(() => {
-    bendGroupGeometry(group, 0.001);
-  }, []);
+  const low = materials.Color5.clone();
+  low.emissive = new THREE.Color(0.3, 0.25, 0.25);
+  low.emissiveIntensity = 0.1;
+  low.toneMapped = false;
+
+  // useEffect(() => {
+  //   bendGroupGeometry(group, 0.001);
+  // }, []);
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -338,12 +337,13 @@ export function WorldMap(
         scale={0.018}
       />
       <group
+        name="Australia"
         position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       >
-        <mesh geometry={nodes.Plane011.geometry} material={low.clone()} />
-        <mesh geometry={nodes.Plane011_1.geometry} material={low.clone()} />
+        <mesh geometry={nodes.Plane011.geometry} material={max.clone()} />
+        <mesh geometry={nodes.Plane011_1.geometry} material={max.clone()} />
       </group>
       <mesh
         geometry={nodes.Austria.geometry}
@@ -633,12 +633,12 @@ export function WorldMap(
         scale={0.018}
       />
       <group
+        name="United_Kingdom"
         position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       >
-        <mesh geometry={nodes.Plane052.geometry} material={low.clone()} />
-        <mesh geometry={nodes.Plane052_1.geometry} material={low.clone()} />
+        <mesh geometry={nodes.Plane052.geometry} material={high.clone()} />
       </group>
       <mesh
         geometry={nodes.Fiji.geometry}
@@ -1096,6 +1096,7 @@ export function WorldMap(
         scale={0.018}
       />
       <group
+        name="Norway"
         position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
@@ -1357,6 +1358,8 @@ export function WorldMap(
         scale={0.018}
       />
       <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.Sweden.geometry}
         material={low.clone()}
         position={[0.673, 1, 0]}
