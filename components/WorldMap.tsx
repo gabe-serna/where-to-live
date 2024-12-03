@@ -10,6 +10,8 @@ import * as THREE from "three";
 import React, { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
+import HeatmapScaling from "@/lib/heatmapScaling";
+import { invalidate } from "@react-three/fiber";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -209,47 +211,8 @@ type GLTFResult = GLTF & {
   };
 };
 
-function bendGroupGeometry(
-  groupRef: React.RefObject<THREE.Group>,
-  strength: number,
-) {
-  const group = groupRef.current;
-  if (!group) return;
-
-  const center = new THREE.Vector3();
-  group.updateWorldMatrix(true, true);
-  group.getWorldPosition(center);
-
-  group.traverse((child) => {
-    if (child instanceof THREE.Mesh) {
-      const geometry = child.geometry;
-      const clonedGeometry = geometry.clone();
-      const positionAttribute = clonedGeometry.getAttribute("position");
-
-      if (!positionAttribute) return;
-
-      const vertices = positionAttribute.array;
-
-      for (let i = 0; i < vertices.length; i += 3) {
-        const x = vertices[i];
-        const y = vertices[i + 1];
-        const z = vertices[i + 2];
-
-        const distanceFromCenter = Math.sqrt(
-          Math.pow(x - center.x, 2) + Math.pow(z - center.z, 2),
-        );
-        const curvedY = y - Math.pow(distanceFromCenter, 2) * strength;
-        vertices[i + 1] = curvedY;
-      }
-      positionAttribute.needsUpdate = true;
-      child.geometry = clonedGeometry;
-    }
-  });
-}
 export function WorldMap(
-  props: JSX.IntrinsicElements["group"] & {
-    material: THREE.MeshStandardMaterial;
-  },
+  props: JSX.IntrinsicElements["group"] & { material: THREE.Material },
 ) {
   const { nodes, materials } = useGLTF("/models/worldmap.glb") as GLTFResult;
   const group = useRef<THREE.Group>(null!);
@@ -260,19 +223,31 @@ export function WorldMap(
   material.toneMapped = false;
 
   useEffect(() => {
-    // group.current.traverse((child) => {
-    //   if (child instanceof THREE.Mesh && child.name === "Japan") {
-    //     child.material.emissiveIntensity = 2;
-    //   }
-    //   if (child instanceof THREE.Group && child.name === "Australia") {
-    //     child.traverse((child) => {
-    //       if (child instanceof THREE.Mesh) {
-    //         child.material.emissiveIntensity = 2;
-    //       }
-    //     });
-    //   }
+    /**
+     * Example of Scores Data
+     */
+    // const scores = new Map<string, number>();
+    // scores.set("Japan", Math.random());
+    // scores.set("Australia", Math.random());
+    // scores.forEach((value, key) => {
+    //   group.current.traverse((child) => {
+    //     if (child instanceof THREE.Mesh && child.name === key) {
+    //       const { red, green, blue, intensity } = HeatmapScaling(value);
+    //       child.material.emissive.setRGB(red, green, blue);
+    //       child.material.emissiveIntensity = intensity;
+    //       invalidate();
+    //     } else if (child instanceof THREE.Group && child.name === key) {
+    //       child.traverse((child) => {
+    //         if (child instanceof THREE.Mesh) {
+    //           const { red, green, blue, intensity } = HeatmapScaling(value);
+    //           child.material.emissive.setRGB(red, green, blue);
+    //           child.material.emissiveIntensity = intensity;
+    //           invalidate();
+    //         }
+    //       });
+    //     }
+    //   });
     // });
-    // bendGroupGeometry(group, 0.001);
   }, []);
 
   return (
@@ -1209,7 +1184,7 @@ export function WorldMap(
       <mesh
         name="Pakistan"
         geometry={nodes.Pakistan.geometry}
-        material={props.material}
+        material={material.clone()}
         position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}

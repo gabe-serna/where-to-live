@@ -1,9 +1,5 @@
 "use client";
-import {
-  OrbitControls,
-  OrthographicCamera,
-  PerspectiveCamera,
-} from "@react-three/drei";
+import { OrthographicCamera } from "@react-three/drei";
 import { WorldMap } from "./WorldMap";
 import {
   Bloom,
@@ -46,24 +42,8 @@ export default function Experience() {
     camera.current.lookAt(currentTarget.current);
   });
 
-  useControls({
-    score: {
-      value: 0,
-      min: 0,
-      max: 1,
-      step: 0.01,
-      onChange: (value) => {
-        const { red, green, blue, intensity } = HeatmapScaling(value);
-        material.emissive.setRGB(red, green, blue);
-        material.emissiveIntensity = intensity;
-        invalidate();
-      },
-    },
-  });
-
   return (
     <>
-      {/* <OrbitControls /> */}
       <OrthographicCamera
         ref={camera}
         position={[0, 0, 10]}
