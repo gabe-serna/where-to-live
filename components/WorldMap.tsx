@@ -260,18 +260,18 @@ export function WorldMap(
   material.toneMapped = false;
 
   useEffect(() => {
-    group.current.traverse((child) => {
-      if (child instanceof THREE.Mesh && child.name === "Japan") {
-        child.material.emissiveIntensity = 2;
-      }
-      if (child instanceof THREE.Group && child.name === "Australia") {
-        child.traverse((child) => {
-          if (child instanceof THREE.Mesh) {
-            child.material.emissiveIntensity = 2;
-          }
-        });
-      }
-    });
+    // group.current.traverse((child) => {
+    //   if (child instanceof THREE.Mesh && child.name === "Japan") {
+    //     child.material.emissiveIntensity = 2;
+    //   }
+    //   if (child instanceof THREE.Group && child.name === "Australia") {
+    //     child.traverse((child) => {
+    //       if (child instanceof THREE.Mesh) {
+    //         child.material.emissiveIntensity = 2;
+    //       }
+    //     });
+    //   }
+    // });
     // bendGroupGeometry(group, 0.001);
   }, []);
 
@@ -888,6 +888,7 @@ export function WorldMap(
         position={[0.673, 1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
+        onClick={() => console.log("japan")}
       />
       <mesh
         name="Jordan"
