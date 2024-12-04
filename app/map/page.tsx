@@ -17,10 +17,6 @@ export default function Map() {
     setScore({ country: countryName, score: scoreValue });
   };
 
-  useEffect(() => {
-    console.log("score changed:", score);
-  }, [score]);
-
   return (
     <>
       <R3FCanvas>

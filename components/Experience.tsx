@@ -47,7 +47,7 @@ export default function Experience() {
       <OrthographicCamera
         ref={camera}
         position={[0, 0, 10]}
-        zoom={150}
+        zoom={300}
         makeDefault
       />
       <EffectComposer>
