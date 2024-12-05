@@ -18,13 +18,18 @@ export interface Geography {
 }
 
 export type Climate =
-  | "Tropical"
+  | "Arctic"
   | "Arid"
-  | "Semi-Arid"
-  | "Temperate"
   | "Continental"
-  | "Polar"
-  | "Diverse";
+  | "Desert"
+  | "Diverse"
+  | "Highlands"
+  | "Mediterranean"
+  | "Semi-Arid "
+  | "Subtropical"
+  | "Subarctic"
+  | "Temperate"
+  | "Tropical";
 
 export interface Economy {
   costOfLiving: number;

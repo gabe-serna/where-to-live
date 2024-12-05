@@ -989,6 +989,21 @@ export function WorldMap(
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
+      <group name="Kiribati" position={[4.55, -0.4, 0.01]} scale={0.018}>
+        <mesh material={material.clone()} rotation-z={-1}>
+          <planeGeometry args={[2, 0.1]} />
+        </mesh>
+        <mesh position={[3.5, -2.5, 0]} material={material.clone()}>
+          <planeGeometry args={[0.9, 0.1]} />
+        </mesh>
+        <mesh
+          position={[6, 1, 0]}
+          rotation-z={-1.2}
+          material={material.clone()}
+        >
+          <planeGeometry args={[1.2, 0.1]} />
+        </mesh>
+      </group>
       <mesh
         name="Kuwait"
         geometry={nodes.Kuwait.geometry}
