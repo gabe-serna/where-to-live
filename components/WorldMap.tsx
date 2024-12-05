@@ -1093,6 +1093,14 @@ export function WorldMap(
         scale={0.018}
       />
       <mesh
+        name="Luxembourg"
+        material={material.clone()}
+        position={[0.135, 1.244, 0.1]}
+        scale={0.018}
+      >
+        <planeGeometry args={[0.7, 1]} />
+      </mesh>
+      <mesh
         name="Madagascar"
         geometry={nodes.Madagascar.geometry}
         material={material.clone()}
