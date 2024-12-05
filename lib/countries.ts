@@ -43,14 +43,16 @@ export interface Infrastructure {
 }
 
 export interface Social {
-  languages: string[];
+  officialLanguage: string[];
+  minorityLanguage: string[];
+  otherLanguage: string[];
   immigrants: number;
   emigrants: number;
   politicalStability: number;
   politicalAffiliation:
     | "Left"
-    | "Center-Left"
+    | "Left-Center"
     | "Center"
-    | "Center-Right"
+    | "Right-Center"
     | "Right";
 }

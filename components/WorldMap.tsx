@@ -376,7 +376,7 @@ export function WorldMap(
         position={[-1.62, 0.15, 0.01]}
         scale={0.018}
       >
-        <planeGeometry args={[0.4, 0.5]} />
+        <planeGeometry args={[0.5, 0.2]} />
       </mesh>
       <mesh
         name="Belarus"
@@ -803,6 +803,15 @@ export function WorldMap(
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
+      <mesh
+        name="Grenada"
+        material={material.clone()}
+        position={[-1.67, 0.11, 0.01]}
+        rotation-z={-0.2}
+        scale={0.018}
+      >
+        <planeGeometry args={[0.3, 0.6]} />
+      </mesh>
       <mesh
         name="Greenland"
         geometry={nodes.Greenland.geometry}
