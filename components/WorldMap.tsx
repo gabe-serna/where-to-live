@@ -991,17 +991,17 @@ export function WorldMap(
       />
       <group name="Kiribati" position={[4.55, -0.4, 0.01]} scale={0.018}>
         <mesh material={material.clone()} rotation-z={-1}>
-          <planeGeometry args={[2, 0.1]} />
+          <planeGeometry args={[2, 0.3]} />
         </mesh>
         <mesh position={[3.5, -2.5, 0]} material={material.clone()}>
-          <planeGeometry args={[0.9, 0.1]} />
+          <planeGeometry args={[0.9, 0.3]} />
         </mesh>
         <mesh
           position={[6, 1, 0]}
           rotation-z={-1.2}
           material={material.clone()}
         >
-          <planeGeometry args={[1.2, 0.1]} />
+          <planeGeometry args={[1.2, 0.3]} />
         </mesh>
       </group>
       <mesh
@@ -1125,6 +1125,15 @@ export function WorldMap(
         scale={0.018}
       />
       <mesh
+        name="Maldives"
+        material={material.clone()}
+        position={[2.02, -0.1, 0.1]}
+        rotation-z={Math.PI / 2}
+        scale={0.018}
+      >
+        <planeGeometry args={[3.5, 0.2]} />
+      </mesh>
+      <mesh
         name="Mali"
         geometry={nodes.Mali.geometry}
         material={material.clone()}
@@ -1132,6 +1141,24 @@ export function WorldMap(
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
+      <mesh
+        name="Malta"
+        material={material.clone()}
+        position={[0.35, 0.83, 0.1]}
+        rotation-z={-0.6}
+        scale={0.018}
+      >
+        <planeGeometry args={[0.9, 0.3]} />
+      </mesh>
+      <mesh
+        name="Marshall_Islands"
+        material={material.clone()}
+        position={[4.45, -0.1, 0.01]}
+        rotation-z={-0.4}
+        scale={0.018}
+      >
+        <planeGeometry args={[5, 0.3]} />
+      </mesh>
       <mesh
         name="Mauritania"
         geometry={nodes.Mauritania.geometry}
@@ -1157,6 +1184,15 @@ export function WorldMap(
         scale={0.018}
       />
       <mesh
+        name="Micronesia"
+        material={material.clone()}
+        position={[4.3, -0.15, 0.01]}
+        rotation-z={-0.1}
+        scale={0.018}
+      >
+        <planeGeometry args={[8, 0.2]} />
+      </mesh>
+      <mesh
         name="Moldova"
         geometry={nodes.Moldova.geometry}
         material={material.clone()}
@@ -1164,6 +1200,15 @@ export function WorldMap(
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.018}
       />
+      <mesh
+        name="Monaco"
+        material={material.clone()}
+        position={[0.17, 1.07, 0.01]}
+        rotation-z={0.75}
+        scale={0.018}
+      >
+        <planeGeometry args={[0.4, 0.2]} />
+      </mesh>
       <mesh
         name="Mongolia"
         geometry={nodes.Mongolia.geometry}
