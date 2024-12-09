@@ -130,11 +130,13 @@ export const LANGUAGE_LIST = {
   },
   "Isolate or Unclassified": ["Basque", "Dhivehi"],
   "Creoles and Pidgins": [
+    "Antiguan and Barbudan Creole",
     "Haitian Creole",
     "Seychellois Creole",
     "Cape Verdean Creole",
     "Jamaican Patois",
     "Limonese Creole",
+    "Tok Pisin",
   ],
   Other: ["Armenian Sign Language", "Romani"],
 };

@@ -40,11 +40,13 @@ export function calculateGeographyScore(
     : { points: 0, total: 0 };
 
   const urbanVsRural = !scores.noPreference.urbanPercentage
-    ? getNumberScore(
-        "symmetric",
-        scores.urbanPercentage,
-        country.urbanPercentage,
-      )
+    ? country.urbanPercentage !== undefined
+      ? getNumberScore(
+          "symmetric",
+          scores.urbanPercentage,
+          country.urbanPercentage,
+        )
+      : { points: 0, total: 0 }
     : { points: 0, total: 0 };
 
   let climate: Score;

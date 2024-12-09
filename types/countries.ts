@@ -10,8 +10,8 @@ export interface Geography {
   continent: string;
   population: number;
   density: number;
-  urbanPercentage: number;
-  ruralPercentage: number;
+  urbanPercentage?: number;
+  ruralPercentage?: number;
   climate: Climate[];
   avgTempLow: number;
   avgTempHigh: number;
@@ -22,35 +22,42 @@ export type Climate =
   | "Desert"
   | "Highlands"
   | "Mediterranean"
-  | "Semi-Arid "
+  | "Semi-Arid"
   | "Subtropical"
   | "Subarctic"
   | "Temperate"
   | "Tropical";
 
 export interface Economy {
-  costOfLiving: number;
-  unemploymentRate: number;
-  gdpPerCapita: number;
-  wealthInequality: number;
+  costOfLiving?: number;
+  unemploymentRate?: number;
+  gdpPerCapita?: number;
+  wealthInequality?: number;
 }
 
 export interface Infrastructure {
-  internetConnectivity: number;
-  publicTransportation: number;
-  healthcare: number;
-  education: number;
-  criminality: number;
-  airQuality: number;
+  connectivityPercentage?: number;
+  publicTransportation?: number;
+  healthcare?: number;
+  education?: number;
+  criminality?: number;
+  airQuality?: number;
 }
 
 export interface Social {
-  officialLanguage: string[];
-  minorityLanguage: string[];
-  otherLanguage: string[];
+  officialLanguages: string[];
+  otherLanguages: string[];
   immigrants: number;
   emigrants: number;
-  politicalStability: number;
+  imgrVsEmgr: number;
+  politicalStability?: number;
+  politicalCorruption?: number;
+  politicalRightsRating?: number;
+  politicalRegime:
+    | "Closed Autocracy"
+    | "Electoral Autocracy"
+    | "Electoral Democracy"
+    | "Liberal Democracy";
   politicalOrientation:
     | "Left"
     | "Left-Center"

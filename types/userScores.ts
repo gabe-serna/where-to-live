@@ -60,14 +60,14 @@ interface EconomyScores {
 }
 
 interface InfrastructureScores {
-  internetConnectivity: number;
+  connectivityPercentage: number;
   publicTransportation: number;
   healthcare: number;
   education: number;
   criminality: number;
   airQuality: number;
   noPreference: {
-    internetConnectivity: boolean;
+    connectivityPercentage: boolean;
     publicTransportation: boolean;
     healthcare: boolean;
     education: boolean;
