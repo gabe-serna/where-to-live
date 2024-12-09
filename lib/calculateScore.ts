@@ -5,20 +5,21 @@ import * as DIVISIONS from "@/constants/tierDivisons";
 export default function calculateScores(
   userScores: UserScores,
   country: Country,
-) {
+): Score {
   const geographyScore = calculateGeographyScore(
     userScores.geography,
     country.geography,
   );
-  const economyScore = calculateEconomyScore(
-    userScores.economy,
-    country.economy,
-  );
-  const infrastructureScore = calculateInfrastructureScore(
-    userScores.infrastructure,
-    country.infrastructure,
-  );
-  const socialScore = calculateSocialScore(userScores.social, country.social);
+  // const economyScore = calculateEconomyScore(
+  //   userScores.economy,
+  //   country.economy,
+  // );
+  // const infrastructureScore = calculateInfrastructureScore(
+  //   userScores.infrastructure,
+  //   country.infrastructure,
+  // );
+  // const socialScore = calculateSocialScore(userScores.social, country.social);
+  return geographyScore;
 }
 
 function calculateGeographyScore(

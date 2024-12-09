@@ -1,10 +1,21 @@
+/**
+ * Supporting Types
+ */
 export interface Score {
   points: number;
   total: number;
 }
 
-export type Preference = "preferred" | "neutral" | "undesired";
+export type Preference = "preferred" | "neutral" | "avoid";
 
+export interface Tier {
+  label: string;
+  preference: Preference;
+}
+
+/**
+ * Main Types
+ */
 export interface UserScores {
   geography: GeographyScores;
   economy: EconomyScores;
@@ -13,12 +24,7 @@ export interface UserScores {
   importanceRanking: string[];
 }
 
-export interface Tier {
-  label: string;
-  preference: Preference;
-}
-
-interface GeographyScores {
+export interface GeographyScores {
   continent: Tier[];
   population: Tier[];
   density: Tier[];
