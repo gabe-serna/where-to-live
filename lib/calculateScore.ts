@@ -28,8 +28,8 @@ export function calculateGeographyScore(
   country: Country["geography"],
 ): Score {
   // Get Individual Scores
-  let continent = !scores.noPreference.continent
-    ? getEnumScore(scores.continent, country.continent)
+  let continent = !scores!.noPreference.continent
+    ? getEnumScore(scores!.continent!, country.continent)
     : { points: 0, total: 0 };
 
   if (continent.total !== 0 && country.continent === "Asia Europe") {
