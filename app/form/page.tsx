@@ -21,6 +21,7 @@ import {
 import { SelectContent } from "@radix-ui/react-select";
 import { Button } from "@/components/ui/button";
 import { GeographyScores } from "@/types/userScores";
+import { calculateGeographyScore } from "@/lib/calculateScore";
 
 const formSchema = z.object({
   north_america: z.enum(["preferred", "neutral", "avoid"]),
@@ -239,7 +240,7 @@ export default function FormPage() {
         temperature: false,
       },
     };
-    console.log(scores);
+    // const finalScore = calculateGeographyScore(scores);
   }
 
   return (
@@ -669,7 +670,7 @@ export default function FormPage() {
         </section>
 
         <section>
-          <h2 className="mb-4 text-2xl font-bold">Climate Preferences</h2>
+          <h2 className="mb-4 text-2xl font-bold">Climate</h2>
           <span className="grid w-fit grid-cols-3 gap-8">
             <FormField
               control={form.control}
@@ -1026,7 +1027,7 @@ export default function FormPage() {
         </section>
 
         <section>
-          <h2 className="mb-4 text-2xl font-bold">Temperature Preferences</h2>
+          <h2 className="mb-4 text-2xl font-bold">Temperature</h2>
           <span className="grid w-fit grid-cols-2 gap-8">
             <FormField
               control={form.control}

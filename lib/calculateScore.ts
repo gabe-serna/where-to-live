@@ -22,7 +22,7 @@ export default function calculateScores(
   return geographyScore;
 }
 
-function calculateGeographyScore(
+export function calculateGeographyScore(
   scores: UserScores["geography"],
   country: Country["geography"],
 ): Score {
@@ -47,12 +47,52 @@ function calculateGeographyScore(
       )
     : { points: 0, total: 0 };
 
+  let climate: Score;
+  if (scores.noPreference.climate) climate = { points: 0, total: 0 };
+  else {
+    let points = 0;
+    country.climate.forEach((c) => {
+      const score = getEnumScore(scores.climate, c);
+      points += score.points;
+    });
+    points /= country.climate.length;
+
+    climate = { points, total: 10 };
+  }
+
+  let temperature: Score;
+  if (scores.noPreference.temperature) temperature = { points: 0, total: 0 };
+  else {
+    const range =
+      scores.temperature.avgTempHigh - scores.temperature.avgTempLow;
+    const normDMin =
+      Math.max(0, scores.temperature.avgTempLow - country.avgTempLow) / range;
+    const normDMax =
+      Math.max(0, country.avgTempHigh - scores.temperature.avgTempHigh) / range;
+
+    const minScore = 10 / (1 + Math.exp(5 * normDMin - 2.5));
+    const maxScore = 10 / (1 + Math.exp(5 * normDMax - 2.5));
+    const points = (minScore + maxScore) / 2;
+
+    temperature = { points, total: 10 };
+  }
+
   // Calculate Total Score
   const points =
-    continent.points + population.points + density.points + urbanVsRural.points;
+    continent.points +
+    population.points +
+    density.points +
+    urbanVsRural.points +
+    climate.points +
+    temperature.points;
 
   const total =
-    continent.total + population.total + density.total + urbanVsRural.total;
+    continent.total +
+    population.total +
+    density.total +
+    urbanVsRural.total +
+    climate.total +
+    temperature.total;
 
   return { points, total };
 }

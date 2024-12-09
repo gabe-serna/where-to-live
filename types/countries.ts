@@ -18,11 +18,8 @@ export interface Geography {
 }
 
 export type Climate =
-  | "Arctic"
-  | "Arid"
   | "Continental"
   | "Desert"
-  | "Diverse"
   | "Highlands"
   | "Mediterranean"
   | "Semi-Arid "
