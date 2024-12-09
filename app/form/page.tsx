@@ -22,6 +22,7 @@ import { SelectContent } from "@radix-ui/react-select";
 import { Button } from "@/components/ui/button";
 import { GeographyScores } from "@/types/userScores";
 import { calculateGeographyScore } from "@/lib/calculateScore";
+import { COUNTRY_DATA } from "@/constants/countryData";
 
 const formSchema = z.object({
   north_america: z.enum(["preferred", "neutral", "avoid"]),
@@ -240,7 +241,16 @@ export default function FormPage() {
         temperature: false,
       },
     };
-    // const finalScore = calculateGeographyScore(scores);
+    COUNTRY_DATA.forEach((country) => {
+      const { points, total } = calculateGeographyScore(
+        scores,
+        country.geography,
+      );
+      const score = points / total;
+      const scorePercent = (score * 100).toFixed(2);
+
+      console.log(`${country.name}: ${scorePercent}%`);
+    });
   }
 
   return (

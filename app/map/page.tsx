@@ -4,7 +4,7 @@ import Experience from "@/components/Experience";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { FormEvent, useContext, useEffect } from "react";
-import ScoreProvider, { ScoreContext } from "../ScoreProvider";
+import { ScoreContext } from "../ScoreProvider";
 
 export default function Map() {
   const { score, setScore } = useContext(ScoreContext);

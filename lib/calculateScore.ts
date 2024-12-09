@@ -5,7 +5,7 @@ import * as DIVISIONS from "@/constants/tierDivisons";
 export default function calculateScores(
   userScores: UserScores,
   country: Country,
-): Score {
+): number {
   const geographyScore = calculateGeographyScore(
     userScores.geography,
     country.geography,
@@ -19,7 +19,8 @@ export default function calculateScores(
   //   country.infrastructure,
   // );
   // const socialScore = calculateSocialScore(userScores.social, country.social);
-  return geographyScore;
+  const finalScore = geographyScore.points / geographyScore.total;
+  return finalScore;
 }
 
 export function calculateGeographyScore(
