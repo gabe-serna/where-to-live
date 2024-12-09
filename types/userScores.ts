@@ -1,23 +1,29 @@
+export interface Score {
+  points: number;
+  total: number;
+}
+
+export type Preference = "preferred" | "neutral" | "undesired";
+
 export interface UserScores {
   geography: GeographyScores;
   economy: EconomyScores;
   infrastructure: InfrastructureScores;
   social: SocialScores;
+  importanceRanking: string[];
 }
 
-interface Tier {
+export interface Tier {
   label: string;
-  value: "preferred" | "neutral" | "undesired";
+  preference: Preference;
 }
 
 interface GeographyScores {
   continent: Tier[];
   population: Tier[];
   density: Tier[];
-  urbanVsRural: {
-    urbanPercentage: number;
-    ruralPercentage: number;
-  };
+  urbanPercentage: number;
+  ruralPercentage: number;
   climate: Tier[];
   temperature: {
     avgTempLow: number;
@@ -27,7 +33,8 @@ interface GeographyScores {
     continent: boolean;
     population: boolean;
     density: boolean;
-    urbanVsRural: boolean;
+    urbanPercentage: boolean;
+    ruralPercentage: boolean;
     climate: boolean;
     temperature: boolean;
   };
