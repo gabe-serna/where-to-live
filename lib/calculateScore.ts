@@ -28,9 +28,19 @@ export function calculateGeographyScore(
   country: Country["geography"],
 ): Score {
   // Get Individual Scores
-  const continent = !scores.noPreference.continent
+  let continent = !scores.noPreference.continent
     ? getEnumScore(scores.continent, country.continent)
     : { points: 0, total: 0 };
+
+  if (continent.total !== 0 && country.continent === "Asia Europe") {
+    // Handle Russia Edge Case
+    const asiaScore = getEnumScore(scores.continent, "Asia");
+    const europeScore = getEnumScore(scores.continent, "Europe");
+    continent = {
+      points: (asiaScore.points + europeScore.points) / 2,
+      total: 10,
+    };
+  }
 
   const population = !scores.noPreference.population
     ? getTierScore(scores.population, DIVISIONS.population, country.population)

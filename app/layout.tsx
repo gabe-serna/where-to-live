@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { fontBody, fontHeading } from "@/lib/fonts";
 import "./globals.css";
-import ScoreProvider from "./ScoreProvider";
+import ScoresProvider from "./ScoresProvider";
 
 export const metadata: Metadata = {
   title: "Where to Live",
@@ -20,9 +20,9 @@ export default function RootLayout({
         className={`${fontHeading.variable} ${fontBody.variable} antialiased`}
       >
         <header></header>
-        <ScoreProvider>
+        <ScoresProvider>
           <main>{children}</main>
-        </ScoreProvider>
+        </ScoresProvider>
         <footer></footer>
       </body>
     </html>

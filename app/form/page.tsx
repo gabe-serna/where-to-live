@@ -17,12 +17,15 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
+  SelectContent,
 } from "@/components/ui/select";
-import { SelectContent } from "@radix-ui/react-select";
 import { Button } from "@/components/ui/button";
 import { GeographyScores } from "@/types/userScores";
 import { calculateGeographyScore } from "@/lib/calculateScore";
 import { COUNTRY_DATA } from "@/constants/countryData";
+import { ScoresContext, ScoresData } from "@/app/ScoresProvider";
+import { useContext } from "react";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   north_america: z.enum(["preferred", "neutral", "avoid"]),
@@ -55,6 +58,9 @@ const formSchema = z.object({
 });
 
 export default function FormPage() {
+  const { setScores } = useContext(ScoresContext);
+  const router = useRouter();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -247,10 +253,14 @@ export default function FormPage() {
         country.geography,
       );
       const score = points / total;
-      const scorePercent = (score * 100).toFixed(2);
 
-      console.log(`${country.name}: ${scorePercent}%`);
+      setScores((prev: ScoresData[]) => [
+        ...prev,
+        { country: country.name, score },
+      ]);
     });
+
+    router.push("/map");
   }
 
   return (

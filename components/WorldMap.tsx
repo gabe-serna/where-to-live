@@ -12,7 +12,7 @@ import { TransformControls, useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 import HeatmapScaling from "@/lib/heatmapScaling";
 import { invalidate, useFrame } from "@react-three/fiber";
-import { ScoreContext } from "@/app/ScoreProvider";
+import { ScoresContext } from "@/app/ScoresProvider";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -215,7 +215,7 @@ type GLTFResult = GLTF & {
 export function WorldMap(
   props: JSX.IntrinsicElements["group"] & { material: THREE.Material },
 ) {
-  const { score } = useContext(ScoreContext);
+  const { scores } = useContext(ScoresContext);
   const { nodes, materials } = useGLTF("/models/worldmap.glb") as GLTFResult;
   const group = useRef<THREE.Group>(null!);
 
@@ -225,23 +225,18 @@ export function WorldMap(
   material.toneMapped = false;
 
   useEffect(() => {
-    /**
-     * Example of Scores Data
-     */
-    const scores = new Map<string, number>();
-    scores.set(score.country, score.score);
-
-    scores.forEach((value, key) => {
+    scores.forEach(({ country, score }) => {
+      const name = country.replace(/ /g, "_");
       group.current.traverse((child) => {
-        if (child instanceof THREE.Mesh && child.name === key) {
-          const { red, green, blue, intensity } = HeatmapScaling(value);
+        if (child instanceof THREE.Mesh && child.name === name) {
+          const { red, green, blue, intensity } = HeatmapScaling(score);
           child.material.emissive.setRGB(red, green, blue);
           child.material.emissiveIntensity = intensity;
           invalidate();
-        } else if (child instanceof THREE.Group && child.name === key) {
+        } else if (child instanceof THREE.Group && child.name === name) {
           child.traverse((child) => {
             if (child instanceof THREE.Mesh) {
-              const { red, green, blue, intensity } = HeatmapScaling(value);
+              const { red, green, blue, intensity } = HeatmapScaling(score);
               child.material.emissive.setRGB(red, green, blue);
               child.material.emissiveIntensity = intensity;
               invalidate();
@@ -250,7 +245,7 @@ export function WorldMap(
         }
       });
     });
-  }, [score]);
+  }, [scores]);
 
   return (
     <group ref={group} {...props} dispose={null}>
