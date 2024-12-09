@@ -43,7 +43,7 @@ export interface Infrastructure {
   publicTransportation: number;
   healthcare: number;
   education: number;
-  crimeRate: number;
+  criminality: number;
   airQuality: number;
 }
 
@@ -54,7 +54,7 @@ export interface Social {
   immigrants: number;
   emigrants: number;
   politicalStability: number;
-  politicalAffiliation:
+  politicalOrientation:
     | "Left"
     | "Left-Center"
     | "Center"
