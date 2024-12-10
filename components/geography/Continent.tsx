@@ -50,6 +50,13 @@ export default function Continent({
     },
   });
 
+  const { handleSubmit } = form;
+
+  const handleClick = (index: number) => {
+    handleSubmit(onSubmit)();
+    setVisibility(index);
+  };
+
   function onSubmit(values: z.infer<typeof formSchema>) {
     const { north_america, south_america, europe, asia, africa, oceania } =
       values;
@@ -88,7 +95,6 @@ export default function Continent({
         },
       },
     }));
-    console.log("preferences updated");
   }
 
   return (
@@ -235,7 +241,7 @@ export default function Continent({
           </span>
           <Button
             type="submit"
-            onClick={() => setVisibility(1.2)}
+            onClick={() => handleClick(1.2)}
             className="ml-auto mt-8 block w-32"
           >
             Next

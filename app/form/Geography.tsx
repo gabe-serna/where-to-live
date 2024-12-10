@@ -1,5 +1,6 @@
 "use client";
 
+import Climate from "@/components/geography/Climate";
 import Continent from "@/components/geography/Continent";
 import Population from "@/components/geography/Population";
 import { Dispatch, SetStateAction } from "react";
@@ -26,6 +27,7 @@ export default function Geography({
       {visibilityIndex == 1.2 && (
         <Population setVisibility={setVisibilityIndex} />
       )}
+      {visibilityIndex == 1.3 && <Climate setVisibility={setVisibilityIndex} />}
     </>
   );
 }

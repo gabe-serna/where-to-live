@@ -59,6 +59,13 @@ export default function Population({
     },
   });
 
+  const { handleSubmit } = form;
+
+  const handleClick = (index: number) => {
+    handleSubmit(onSubmit)();
+    setVisibility(index);
+  };
+
   function onSubmit(values: z.infer<typeof formSchema>) {
     const {
       pop_tiny,
@@ -100,12 +107,16 @@ export default function Population({
       label: "Medium",
       preference: density_medium,
     };
+    const densityHigh = {
+      label: "High",
+      preference: density_high,
+    };
 
     setPreferences((prev) => ({
       ...prev,
       geography: {
         population: [popTiny, popSmall, popModerate, popLarge, popMassive],
-        density: [densityLow, densityMedium],
+        density: [densityLow, densityMedium, densityHigh],
         urbanPercentage: urban_percentage,
         ruralPercentage: rural_percentage,
         noPreference: {
@@ -404,14 +415,14 @@ export default function Population({
               type="submit"
               className="w-32"
               variant="outline"
-              onClick={() => setVisibility(1.1)}
+              onClick={() => handleClick(1.1)}
             >
               Back
             </Button>
             <Button
               type="submit"
               className="w-32"
-              onClick={() => setVisibility(1.3)}
+              onClick={() => handleClick(1.3)}
             >
               Next
             </Button>
