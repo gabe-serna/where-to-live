@@ -23,6 +23,7 @@ import { Button } from "@/components/ui/button";
 import { PreferenceContext } from "@/app/form/PreferenceProvider";
 import { SetStateAction, Dispatch, useContext } from "react";
 import { Input } from "@/components/ui/input";
+import NavigateButton from "@/components/NavigateButton";
 
 const formSchema = z.object({
   pop_tiny: z.enum(["preferred", "neutral", "avoid"]),
@@ -411,21 +412,8 @@ export default function Population({
             />
           </span>
           <span className="mt-8 flex w-full justify-between">
-            <Button
-              type="submit"
-              className="w-32"
-              variant="outline"
-              onClick={() => handleClick(1.1)}
-            >
-              Back
-            </Button>
-            <Button
-              type="submit"
-              className="w-32"
-              onClick={() => handleClick(1.3)}
-            >
-              Next
-            </Button>
+            <NavigateButton type="back" handleClick={handleClick} index={1.1} />
+            <NavigateButton type="next" handleClick={handleClick} index={1.3} />
           </span>
         </section>
       </form>

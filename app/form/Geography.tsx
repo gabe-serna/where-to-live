@@ -18,8 +18,9 @@ export default function Geography({
   return (
     <>
       <header className="w-full">
-        <h1 className="text-center text-2xl font-semibold">Geography</h1>
-        <hr className="border-white" />
+        <h1 className="text-left text-3xl font-bold tracking-[0.0125em]">
+          Geography
+        </h1>
       </header>
       {visibilityIndex == 1.1 && (
         <Continent setVisibility={setVisibilityIndex} />

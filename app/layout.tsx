@@ -21,7 +21,7 @@ export default function RootLayout({
       >
         <header></header>
         <ScoresProvider>
-          <main>{children}</main>
+          <main className="relative">{children}</main>
         </ScoresProvider>
         <footer></footer>
       </body>

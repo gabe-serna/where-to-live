@@ -16,7 +16,7 @@ export default function FormPage() {
 
   return (
     <PreferenceProvider>
-      <div className="mx-52 my-20 flex min-h-screen flex-col items-center bg-zinc-800 p-10">
+      <div className="mx-52 my-20 flex min-h-screen flex-col items-center bg-gray-800/60 p-10 backdrop-blur-2xl">
         <Geography visibility={{ visibilityIndex, setVisibilityIndex }} />
       </div>
     </PreferenceProvider>

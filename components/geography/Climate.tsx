@@ -11,10 +11,10 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Button } from "@/components/ui/button";
 import { PreferenceContext } from "@/app/form/PreferenceProvider";
 import { SetStateAction, Dispatch, useContext } from "react";
 import { Input } from "@/components/ui/input";
+import NavigateButton from "@/components/NavigateButton";
 
 const formSchema = z.object({
   climate_continental: z.enum(["preferred", "neutral", "avoid"]),
@@ -546,16 +546,8 @@ export default function Climate({
             />
           </span>
           <span className="mt-8 flex w-full justify-between">
-            <Button
-              className="w-32"
-              variant="outline"
-              onClick={() => handleClick(1.2)}
-            >
-              Back
-            </Button>
-            <Button className="w-32" onClick={() => handleClick(2)}>
-              Next
-            </Button>
+            <NavigateButton type="back" handleClick={handleClick} index={1.2} />
+            <NavigateButton type="next" handleClick={handleClick} index={2} />
           </span>
         </section>
       </form>

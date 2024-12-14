@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import {
@@ -19,9 +19,9 @@ import {
   SelectValue,
   SelectContent,
 } from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
 import { PreferenceContext } from "@/app/form/PreferenceProvider";
 import { SetStateAction, Dispatch, useContext } from "react";
+import NavigateButton from "@/components/NavigateButton";
 
 const formSchema = z.object({
   north_america: z.enum(["preferred", "neutral", "avoid"]),
@@ -104,7 +104,9 @@ export default function Continent({
         className="mt-8 size-full space-y-16"
       >
         <section>
-          <h2 className="mb-4 text-2xl font-bold">Continent</h2>
+          <h2 className="mb-4 text-2xl font-semibold text-muted-foreground">
+            Continent
+          </h2>
           <span className="grid w-fit grid-cols-3 gap-8">
             <FormField
               control={form.control}
@@ -239,13 +241,7 @@ export default function Continent({
               )}
             />
           </span>
-          <Button
-            type="submit"
-            onClick={() => handleClick(1.2)}
-            className="ml-auto mt-8 block w-32"
-          >
-            Next
-          </Button>
+          <NavigateButton type="next" handleClick={handleClick} index={1.2} />
         </section>
       </form>
     </Form>
