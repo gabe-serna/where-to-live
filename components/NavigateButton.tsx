@@ -14,7 +14,7 @@ export default function NavigateButton({ type, handleClick, index }: Props) {
     <Button
       type="submit"
       onClick={() => handleClick(index)}
-      className="ml-auto mt-8 block h-max w-min"
+      className={`mt-8 block h-max w-min ${type === "next" ? "ml-auto" : "mr-auto"}`}
       variant="ghost"
     >
       {type === "next" ? (
