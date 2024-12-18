@@ -19,11 +19,11 @@ import {
   SelectValue,
   SelectContent,
 } from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
 import { PreferenceContext } from "@/app/form/PreferenceProvider";
-import { SetStateAction, Dispatch, useContext } from "react";
+import { SetStateAction, Dispatch, useContext, useState } from "react";
 import { Input } from "@/components/ui/input";
 import NavigateButton from "@/components/NavigateButton";
+import { SettlementSlider } from "@/components/SettlementSlider";
 
 const formSchema = z.object({
   pop_tiny: z.enum(["preferred", "neutral", "avoid"]),
@@ -44,6 +44,7 @@ export default function Population({
   setVisibility: Dispatch<SetStateAction<number>>;
 }) {
   const { setPreferences } = useContext(PreferenceContext);
+  const [ruralPercent, setRuralPercent] = useState(50);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -135,7 +136,9 @@ export default function Population({
         className="mt-8 size-full space-y-16"
       >
         <section>
-          <h2 className="mb-4 text-2xl font-bold">Population</h2>
+          <h2 className="mb-4 text-2xl font-semibold text-muted-foreground">
+            Population
+          </h2>
           <span className="grid w-fit grid-cols-3 gap-8">
             <FormField
               control={form.control}
@@ -250,7 +253,9 @@ export default function Population({
           </span>
         </section>
         <section>
-          <h2 className="mb-4 text-2xl font-bold">Density</h2>
+          <h2 className="mb-4 text-2xl font-semibold text-muted-foreground">
+            Density
+          </h2>
           <span className="grid w-fit grid-cols-3 gap-8">
             <FormField
               control={form.control}
@@ -372,39 +377,58 @@ export default function Population({
           </span>
         </section>
         <section>
-          <h2 className="mb-4 text-2xl font-bold">Settlement Type</h2>
-          <span className="grid w-fit grid-cols-2 gap-8">
+          <h2 className="mb-4 text-2xl font-semibold text-muted-foreground">
+            Settlement Type
+          </h2>
+          <span className="flex gap-8">
             <FormField
               control={form.control}
               name="urban_percentage"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Urban Percentage</FormLabel>
+                <FormItem className="flex flex-col-reverse items-center">
+                  <FormLabel className="font-bold uppercase tracking-wide text-gray-600">
+                    Urban
+                  </FormLabel>
                   <Input
                     type="number"
                     {...field}
                     min={0}
+                    value={Math.abs(ruralPercent - 100)}
                     max={100}
                     onChange={(e) => field.onChange(parseInt(e.target.value))}
-                    placeholder="Enter Urban Percentage"
+                    className="pointer-events-none border-0 bg-transparent p-0 pr-1 text-right"
+                    tabIndex={-1}
                   />
                   <FormMessage />
                 </FormItem>
               )}
             />
+            <SettlementSlider
+              defaultValue={[50]}
+              max={100}
+              step={5}
+              onChange={(e) => {
+                setRuralPercent(parseInt((e.target as HTMLInputElement).value));
+              }}
+              className="mt-6 max-w-72"
+            />
             <FormField
               control={form.control}
               name="rural_percentage"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Rural Percentage</FormLabel>
+                <FormItem className="flex flex-col-reverse items-center">
+                  <FormLabel className="font-bold uppercase tracking-wide text-gray-600">
+                    Rural
+                  </FormLabel>
                   <Input
                     type="number"
                     {...field}
                     min={0}
+                    value={ruralPercent}
                     max={100}
                     onChange={(e) => field.onChange(parseInt(e.target.value))}
-                    placeholder="Enter Rural Percentage"
+                    className="pointer-events-none border-0 bg-transparent p-0 pr-1 text-right"
+                    tabIndex={-1}
                   />
                   <FormMessage />
                 </FormItem>
